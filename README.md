@@ -1,0 +1,27 @@
+## 互联网公司经典技术架构
+
+以数字开头的目录为互联网公司的架构文档。
+
+以英文字母A,B,C,D开头的目录按照主题分类的技术架构文档。
+
+在互联网公司架构文档中的资料，不重复放入按主题分类的目录中。  
+
+
+## 国内互联网公司开源项目
+    腾讯开源项目 https://github.com/Tencent/
+    阿里巴巴开源项目 https://github.com/alibaba
+    美团点评开源项目 https://github.com/meituan-dianping  
+    百度 https://github.com/baidu
+    奇虎360 https://github.com/qihoo360
+
+## 国内互联网公司技术架构
+    微信/腾讯技术架构 https://github.com/davideuler/architecture.wechat-tencent
+
+    淘宝/阿里巴巴技术架构 https://github.com/davideuler/architecture.taobao-alibaba
+
+    美团点评技术架构 https://github.com/davideuler/architecture.meituan-dianping
+
+    互联网技术架构 https://github.com/davideuler/architecture.of.internet-product
+
+## 提交经典技术架构文章
+欢迎提交 Pull Request, 或者 Github上面提交Issue， 贴上您觉得经典的架构介绍PPT/PDF或者网页URL。
