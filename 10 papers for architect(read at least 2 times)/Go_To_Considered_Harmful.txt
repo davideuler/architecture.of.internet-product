@@ -1,0 +1,195 @@
+ 
+
+Snap Shots Options [Make this Shot larger] [Close]
+Options
+Disable
+<about:blank>
+Get Free Shots
+<https://account.snap.com/signup.php?source=www.u.arizona.edu&campaign=viral-foot>
+<#>  <#>  <#>
+<#>
+ 
+
+Close
+<http://shots.snap.com/explore/50575/?key=c98b2f96b7b77eed49adb7348d7fd0f5&src=www.u.arizona.edu&cp=pub-logo&url=http%3A%2F%2Fwww.snap.com%2Fabout%2Fshots.php>
+
+<http://www.snap.com/?source=&campaign=snap-shots-logo> Snap Shares for
+charity
+<http://www.snap.com/snapshots.php?source=www.u.arizona.edu&campaign=charity-ribbon#shares>
+
+
+
+    Go To Statement Considered Harmful
+    /Edsger W. Dijkstra/
+
+------------------------------------------------------------------------
+Reprinted from /Communications of the ACM/, Vol. 11, No. 3, March 1968,
+pp. 147-148. Copyright &#169; 1968, Association for Computing Machinery, Inc.
+
+This is a digitized copy derived from an ACM copyrighted work. It is not
+guaranteed to be an accurate copy of the author's original work.
+
+------------------------------------------------------------------------
+
+Key Words and Phrases:
+    go to statement, jump instruction, branch instruction, conditional
+    clause, alternative clause, repetitive clause, program
+    intelligibility, program sequencing 
+CR Categories:
+    4.22, 6.23, 5.24 
+
+
+      Editor:
+
+For a number of years I have been familiar with the observation that the
+quality of programmers is a decreasing function of the density of *go
+to* statements in the programs they produce. More recently I discovered
+why the use of the *go to* statement has such disastrous effects, and I
+became convinced that the *go to* statement should be abolished from all
+"higher level" programming languages (i.e. everything except, perhaps,
+plain machine code). At that time I did not attach too much importance
+to this discovery; I now submit my considerations for publication
+because in very recent discussions in which the subject turned up, I
+have been urged to do so.
+
+My first remark is that, although the programmer's activity ends when he
+has constructed a correct program, the process taking place under
+control of his program is the true subject matter of his activity, for
+it is this process that has to accomplish the desired effect; it is this
+process that in its dynamic behavior has to satisfy the desired
+specifications. Yet, once the program has been made, the "making' of the
+corresponding process is delegated to the machine.
+
+My second remark is that our intellectual powers are rather geared to
+master static relations and that our powers to visualize processes
+evolving in time are relatively poorly developed. For that reason we
+should do (as wise programmers aware of our limitations) our utmost to
+shorten the conceptual gap between the static program and the dynamic
+process, to make the correspondence between the program (spread out in
+text space) and the process (spread out in time) as trivial as possible.
+
+Let us now consider how we can characterize the progress of a process.
+(You may think about this question in a very concrete manner: suppose
+that a process, considered as a time succession of actions, is stopped
+after an arbitrary action, what data do we have to fix in order that we
+can redo the process until the very same point?) If the program text is
+a pure concatenation of, say, assignment statements (for the purpose of
+this discussion regarded as the descriptions of single actions) it is
+sufficient to point in the program text to a point between two
+successive action descriptions. (In the absence of *go to* statements I
+can permit myself the syntactic ambiguity in the last three words of the
+previous sentence: if we parse them as "successive (action
+descriptions)" we mean successive in text space; if we parse as
+"(successive action) descriptions" we mean successive in time.) Let us
+call such a pointer to a suitable place in the text a "textual index."
+
+When we include conditional clauses (*if* /B/ *then* /A/), alternative
+clauses (*if* /B/ *then* /A/1 *else* /A/2), choice clauses as introduced
+by C. A. R. Hoare (case[i] of (/A/1, /A/2,，，，, /An/)),or conditional
+expressions as introduced by J. McCarthy (/B/1 -> /E/1, /B/2 -> /E/2,
+，，，, /Bn/ -> /En/), the fact remains that the progress of the process
+remains characterized by a single textual index.
+
+As soon as we include in our language procedures we must admit that a
+single textual index is no longer sufficient. In the case that a textual
+index points to the interior of a procedure body the dynamic progress is
+only characterized when we also give to which call of the procedure we
+refer. With the inclusion of procedures we can characterize the progress
+of the process via a sequence of textual indices, the length of this
+sequence being equal to the dynamic depth of procedure calling.
+
+Let us now consider repetition clauses (like, *while* /B/ *repeat* /A/
+or *repeat* /A/ *until* /B/). Logically speaking, such clauses are now
+superfluous, because we can express repetition with the aid of recursive
+procedures. For reasons of realism I don't wish to exclude them: on the
+one hand, repetition clauses can be implemented quite comfortably with
+present day finite equipment; on the other hand, the reasoning pattern
+known as "induction" makes us well equipped to retain our intellectual
+grasp on the processes generated by repetition clauses. With the
+inclusion of the repetition clauses textual indices are no longer
+sufficient to describe the dynamic progress of the process. With each
+entry into a repetition clause, however, we can associate a so-called
+"dynamic index," inexorably counting the ordinal number of the
+corresponding current repetition. As repetition clauses (just as
+procedure calls) may be applied nestedly, we find that now the progress
+of the process can always be uniquely characterized by a (mixed)
+sequence of textual and/or dynamic indices.
+
+The main point is that the values of these indices are outside
+programmer's control; they are generated (either by the write-up of his
+program or by the dynamic evolution of the process) whether he wishes or
+not. They provide independent coordinates in which to describe the
+progress of the process.
+
+Why do we need such independent coordinates? The reason is - and this
+seems to be inherent to sequential processes - that we can interpret the
+value of a variable only with respect to the progress of the process. If
+we wish to count the number, /n/ say, of people in an initially empty
+room, we can achieve this by increasing /n/ by one whenever we see
+someone entering the room. In the in-between moment that we have
+observed someone entering the room but have not yet performed the
+subsequent increase of /n/, its value equals the number of people in the
+room minus one!
+
+The unbridled use of the *go to* statement has an immediate consequence
+that it becomes terribly hard to find a meaningful set of coordinates in
+which to describe the process progress. Usually, people take into
+account as well the values of some well chosen variables, but this is
+out of the question because it is relative to the progress that the
+meaning of these values is to be understood! With the *go to* statement
+one can, of course, still describe the progress uniquely by a counter
+counting the number of actions performed since program start (viz. a
+kind of normalized clock). The difficulty is that such a coordinate,
+although unique, is utterly unhelpful. In such a coordinate system it
+becomes an extremely complicated affair to define all those points of
+progress where, say, /n/ equals the number of persons in the room minus
+one!
+
+The *go to* statement as it stands is just too primitive; it is too much
+an invitation to make a mess of one's program. One can regard and
+appreciate the clauses considered as bridling its use. I do not claim
+that the clauses mentioned are exhaustive in the sense that they will
+satisfy all needs, but whatever clauses are suggested (e.g. abortion
+clauses) they should satisfy the requirement that a programmer
+independent coordinate system can be maintained to describe the process
+in a helpful and manageable way.
+
+It is hard to end this with a fair acknowledgment. Am I to judge by whom
+my thinking has been influenced? It is fairly obvious that I am not
+uninfluenced by Peter Landin and Christopher Strachey. Finally I should
+like to record (as I remember it quite distinctly) how Heinz Zemanek at
+the pre-ALGOL meeting in early 1959 in Copenhagen quite explicitly
+expressed his doubts whether the *go to* statement should be treated on
+equal syntactic footing with the assignment statement. To a modest
+extent I blame myself for not having then drawn the consequences of his
+remark
+
+The remark about the undesirability of the *go to* statement is far from
+new. I remember having read the explicit recommendation to restrict the
+use of the *go to* statement to alarm exits, but I have not been able to
+trace it; presumably, it has been made by C. A. R. Hoare. In [1, Sec.
+3.2.1.] Wirth and Hoare together make a remark in the same direction in
+motivating the case construction: "Like the conditional, it mirrors the
+dynamic structure of a program more clearly than *go to* statements and
+switches, and it eliminates the need for introducing a large number of
+labels in the program."
+
+In [2] Guiseppe Jacopini seems to have proved the (logical)
+superfluousness of the *go to* statement. The exercise to translate an
+arbitrary flow diagram more or less mechanically into a jump-less one,
+however, is not to be recommended. Then the resulting flow diagram
+cannot be expected to be more transparent than the original one.
+
+
+      References:
+
+   1. Wirth, Niklaus, and Hoare C. A. R. A contribution to the
+      development of ALGOL. /Comm. ACM 9/ (June 1966), 413-432.
+   2. B&#214;hm, Corrado, and Jacopini Guiseppe. Flow diagrams, Turing
+      machines and languages with only two formation rules. /Comm. ACM
+      9/ (May 1966), 366-371. 
+
+Edsger W. Dijkstra
+/Technological University
+Eindhoven, The Netherlands/
+
