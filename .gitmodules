@@ -1,0 +1,9 @@
+[submodule "4.淘宝-阿里技术架构"]
+	path = 4.淘宝-阿里技术架构
+	url = https://github.com/davideuler/architecture.taobao-alibaba.git
+[submodule "5.微信-腾讯技术架构"]
+	path = 5.微信-腾讯技术架构
+	url = https://github.com/davideuler/architecture.wechat-tencent.git
+[submodule "6.美团-点评技术架构"]
+	path = 6.美团-点评技术架构
+	url = https://github.com/davideuler/architecture.meituan-dianping.git
