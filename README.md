@@ -16,11 +16,7 @@
 
 [淘宝/阿里巴巴技术架构](https://github.com/davideuler/architecture.taobao-alibaba)
 
-[美团点评技术架构](https://github.com/davideuler/architecture.meituan-dianping)
-
-
-## 国内互联网公司开源项目
-
+[美团点评技术架构](https://github.com/davideuler/architecture.meituasrggggggggggggggggggggggggggg
 [腾讯开源项目](https://github.com/Tencent/)
 
 [阿里巴巴开源项目](https://github.com/alibaba)
