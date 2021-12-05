@@ -1,0 +1,454 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<title>Some of my favorite technical papers. | Irrational Exuberance</title>
+<meta name=viewport content="width=device-width,minimum-scale=1">
+<meta name=description content="I&rsquo;ve long been a fan of hosting paper reading groups, where a group of folks sit down and talk about interesting technical papers. One of the first steps to do that is identifying some papers worth chatting about, and here is a list of some papers I&rsquo;ve seen lead to excellent discussions!">
+<meta name=generator content="Hugo 0.89.4">
+<meta name=ROBOTS content="INDEX, FOLLOW">
+<link rel=stylesheet href=/ananke/dist/main.css_5c99d70a7725bacd4c701e995b969fea.css>
+<link rel=stylesheet href=/static/pygments.css>
+<meta property="og:title" content="Some of my favorite technical papers.">
+<meta property="og:description" content="I&rsquo;ve long been a fan of hosting paper reading groups, where a group of folks sit down and talk about interesting technical papers. One of the first steps to do that is identifying some papers worth chatting about, and here is a list of some papers I&rsquo;ve seen lead to excellent discussions!">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lethain.com/some-of-my-favorite-technical-papers/"><meta property="og:image" content="https://lethain.com/static/author.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2018-04-07T06:00:00-07:00">
+<meta property="article:modified_time" content="2018-04-07T06:00:00-07:00">
+<meta itemprop=name content="Some of my favorite technical papers.">
+<meta itemprop=description content="I&rsquo;ve long been a fan of hosting paper reading groups, where a group of folks sit down and talk about interesting technical papers. One of the first steps to do that is identifying some papers worth chatting about, and here is a list of some papers I&rsquo;ve seen lead to excellent discussions!"><meta itemprop=datePublished content="2018-04-07T06:00:00-07:00">
+<meta itemprop=dateModified content="2018-04-07T06:00:00-07:00">
+<meta itemprop=wordCount content="5822"><meta itemprop=image content="https://lethain.com/static/author.png">
+<meta itemprop=keywords content="infrastructure,software-engineering,"><meta name=twitter:card content="summary">
+<meta name=twitter:image content="https://lethain.com/static/author.png">
+<meta name=twitter:title content="Some of my favorite technical papers.">
+<meta name=twitter:description content="I&rsquo;ve long been a fan of hosting paper reading groups, where a group of folks sit down and talk about interesting technical papers. One of the first steps to do that is identifying some papers worth chatting about, and here is a list of some papers I&rsquo;ve seen lead to excellent discussions!">
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-96609067-1','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</head>
+<body class="ma0 avenir bg-white production">
+<header>
+<div class=bg-white>
+<nav class="pv3 ph3 ph4-ns" role=navigation>
+<div class="flex-l justify-between items-center center">
+<a href=/ class="f3 fw2 no-underline black-90 dib">
+Irrational Exuberance
+</a>
+<div class="flex-l items-center">
+<ul class="pl0 mr3">
+<li class="list f5 f4-ns fw4 dib pr3">
+<a class="no-underline black-90" href=/featured/ title="Popular page">
+Popular
+</a>
+</li>
+<li class="list f5 f4-ns fw4 dib pr3">
+<a class="no-underline black-90" href=/tags/ title="Tags page">
+Tags
+</a>
+</li>
+<li class="list f5 f4-ns fw4 dib pr3">
+<a class="no-underline black-90" href=/newsletter/ title="Newsletter page">
+Newsletter
+</a>
+</li>
+<li class="list f5 f4-ns fw4 dib pr3">
+<a class="no-underline black-90" href=/feeds.xml title="RSS page">
+RSS
+</a>
+</li>
+<li class="list f5 f4-ns fw4 dib pr3">
+<a class="no-underline black-90" href=/about title="About page">
+About
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<main class=pb7 role=main>
+<article class="flex-l flex-wrap justify-between mw8 center ph3">
+<header class="mt4 w-100">
+<h1 class="f1 athelas mt3 mb1">Some of my favorite technical papers.</h1>
+<div class=mt4>
+<a href=/tags/infrastructure class="link f5 mid-gray no-underline sans-serif">
+infrastructure (34),
+</a>
+<a href=/tags/software-engineering class="link f5 mid-gray no-underline sans-serif">
+software-engineering (15)
+</a>
+</div>
+</header>
+<div class="nested-copy-line-height lh-copy serif f5 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>I&rsquo;ve long been a fan of <a href=/hosting-paper-reading-group/>hosting paper reading groups</a>,
+where a group of folks sit down and talk about interesting technical papers.
+One of the first steps to do that is identifying some papers worth chatting about,
+and here is a list of some papers I&rsquo;ve seen lead to excellent discussions!</p>
+<h3 id=dynamo-amazons-highly-available-key-value-storehttpss3amazonawscomsystemsandpaperspapersamazon-dynamo-sosp2007pdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/amazon-dynamo-sosp2007.pdf>Dynamo: Amazon&rsquo;s Highly Available Key-value Store</a></h3>
+<p>Reading only the abstract, you&rsquo;d be forgiven for not being overly excited about the Dynamo paper: This paper presents the design and implementation of Dynamo, a highly available key-value storage system that some of Amazon&rsquo;s core services use to provide an always-on experience. To achieve this level of availability, Dynamo sacrifices consistency under certain failure scenarios. It makes extensive use of object versioning and application-assisted conflict resolution in a manner that provides a novel interface for developers to use.</p>
+<p>That said, this is in some senses &ldquo;the&rdquo; classic modern systems paper. It has happened more than once that an engineer I&rsquo;ve met has only read a single systems paper in their career, and that paper was the Dynamo paper. This paper is a phenomenal introduction to eventual consistency, coordinating state across distributed storage, reconciling data as it diverges across replicas and much more.</p>
+<h3 id=hints-for-computer-system-designhttpss3amazonawscomsystemsandpaperspapersacrobat-17pdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/acrobat-17.pdf>Hints for Computer System Design</a></h3>
+<p><a href=https://en.wikipedia.org/wiki/Butler_Lampson>Butler Lampson</a> is an ACM Turning Award winner (among other awards), and worked at the Xerox PARC. This paper concisely summarizes many of his ideas around system design, and is a great read.</p>
+<p>In his words:</p>
+<blockquote>
+<p>Studying the design and implementation of a number of computer has led to some general hints for system design. They are described here and illustrated by many examples, ranging from hardware such as the Alto and the Dorado to application programs such as Bravo and Star.</p>
+</blockquote>
+<p>This paper itself acknowledges that it doesn&rsquo;t aim to break any new ground, but it&rsquo;s a phenomenal overview.</p>
+<h3 id=big-ball-of-mudhttpss3amazonawscomsystemsandpaperspapersbigballofmudpdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/bigballofmud.pdf>Big Ball of Mud</a></h3>
+<p>A reaction against exuberant papers about grandiose design patterns, this paper labels the most frequent architectural pattern as the Big Ball of Mud, and explores why elegant initial designs rarely remain intact as a system goes from concept to solution.</p>
+<p>From the abstract:</p>
+<blockquote>
+<p>While much attention has been focused on high-level software architectural patterns, what is, in effect, he de-facto standard software architecture is seldom discussed. This paper examines this mostfrequently deployed of software architectures: the BIG BALL OF MUD. A BIG BALL OF MUD is a casually, even haphazardly, structured system. Its organization, if one can call it that, is dictated more by expediency than design. Yet, its enduring popularity cannot merely be indicative of a general disregard for architecture.</p>
+</blockquote>
+<p>Although humor is certainly infuses this paper, it&rsquo;s also true that software design is remarkably poor, with very few systems having a design phase and few of those resembling the initial design (and documentation is rarely updated to reflect later decisions), making this an important topic for consideration.</p>
+<h3 id=the-google-file-systemhttpss3amazonawscomsystemsandpaperspapersgfspdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/gfs.pdf>The Google File System</a></h3>
+<p>From the abstract:</p>
+<blockquote>
+<p>The file system has successfully met our storage needs. It is widely deployed within Google as the storage platform for the generation and processing of data used by our service as well as research and development efforts that require large data sets. The largest cluster to date provides hundreds of terabytes of storage across thousands of disks on over a thousand machines, and it is concurrently accessed by hundreds of clients.</p>
+</blockquote>
+<blockquote>
+<p>In this paper, we present file system interface extensions designed to support distributed applications, discuss many aspects of our design, and report measurements from both micro-benchmarks and real world use. Google has done something fairly remarkable in defining the technical themes in Silicon Valley and, at least debatably across the technology industry, for more than the last decade (only recently joined to a lesser extent by Facebook and Twitter as they reach significant scale), and it&rsquo;s done that largely through their remarkable technical papers. The Google File System (GFS) paper is one of the early entries in that strategy, and is also remarkable as the paper which largely inspired the Hadoop File System (HFS).</p>
+</blockquote>
+<h3 id=on-designing-and-deploying-internet-scale-serviceshttpss3amazonawscomsystemsandpaperspapershamiltonpdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/hamilton.pdf>On Designing and Deploying Internet-Scale Services</a></h3>
+<p>We don&rsquo;t always remember to consider Microsoft as one of the largest internet technology players, although increasingly Azure is making that comparison obvious and immediate, and it certainly wasn&rsquo;t a name that necessarily came to mind in 2007. This excellent paper from James Hamilton, exploring tips on building operable systems at extremely large scale, makes it clear that not considering Microsoft as a large internet player was a lapse in our collective judgement.</p>
+<p>From the abstract:</p>
+<blockquote>
+<p>The system-to-administrator ratio is commonly used as a rough metric to understand administrative costs in high-scale services. With smaller, less automated services this ratio can be as low as 2:1, whereas on industry leading, highly automated services, we&rsquo;ve seen ratios as high as 2,500:1. Within Microsoft services, Autopilot [1] is often cited as the magic behind the success of the Windows Live Search team in achieving high system-to-administrator ratios. While auto-administration is important, the most important factor is actually the service itself. Is the service efficient to automate? Is it what we refer to more generally as operations-friendly? Services that are operations friendly require little human intervention, and both detect and recover from all but the most obscure failures without administrative intervention. This paper summarizes the best practices accumulated over many years in scaling some of the largest services at MSN and Windows Live.</p>
+</blockquote>
+<p>This is a true checklist of how to design and evaluate large scale systems (almost like <a href=https://12factor.net/>The Twelve Factor App</a> wants to be for a checklist for operable applications).</p>
+<h3 id=cap-twelve-years-later-how-the-rules-have-changedhttpswwwinfoqcomarticlescap-twelve-years-later-how-the-rules-have-changed><a href=https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>CAP Twelve Years Later: How the Rules Have Changed</a></h3>
+<p>Eric Brewer posited the <a href=https://en.wikipedia.org/wiki/CAP_theorem>CAP theorem</a> in the early 2000s, and twelve years later he wrote this excellent overview and review of CAP (which argues distributed systems have to pick between either availability or consistency during partitions), in part because:</p>
+<blockquote>
+<p>In the decade since its introduction, designers and researchers have used (and sometimes abused) the CAP theorem as a reason to explore a wide variety of novel distributed systems. The NoSQL movement also has applied it as an argument against traditional databases. CAP is interesting because there is not a &ldquo;seminal CAP paper&rdquo;, but this article serves well in such a paper&rsquo;s stead. These ideas are expanded on in the <a href=/papers/e44aff70-e88f-4c43-9c4d-0feaa01d69da/>Harvest and Yield paper</a>.</p>
+</blockquote>
+<h3 id=harvest-yield-and-scalable-tolerant-systemshttpss3amazonawscomsystemsandpaperspapersfox_brewer_99-harvest_yield_and_scalable_tolerant_systemspdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/FOX_Brewer_99-Harvest_Yield_and_Scalable_Tolerant_Systems.pdf>Harvest, Yield, and Scalable Tolerant Systems</a></h3>
+<p>This paper builds on the concepts from <a href=/papers/883d1956-bb05-464c-b02d-5a64f269c810/>CAP Twelve Years Later</a>, introducing the concepts of harvest and yield to add more nuance to the AP vs CP discussion:</p>
+<blockquote>
+<p>The cost of reconciling consistency and state management with high availability is highly magnified by the unprecedented scale and robustness requirements of today&rsquo;s Internet applications. We propose two strategies for improving overall availability using simple mechanisms that scale over large applications whose output behavior tolerates graceful degradation. We characterize this degradation in terms of harvest and yield, and map it directly onto engineering mechanisms that enhance availability by improving fault isolation, and in some cases also simplify programming. By collecting examples of related techniques in the literature and illustrating the surprising range of applications that can benefit from these approaches, we hope to motivate a broader research program in this area.</p>
+</blockquote>
+<p>The harvest and yield concepts are particularly interesting because they are both self-evidence and very rarely explicitly used, instead distributed systems continue to fail in mostly undefined ways. Hopefully as we keep rereading this paper, we&rsquo;ll also start to incorporate it&rsquo;s design concepts into the systems we subsequently build!</p>
+<h3 id=mapreduce-simplified-data-processing-on-large-clustershttpss3amazonawscomsystemsandpaperspapersmapreducepdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/mapreduce.pdf>MapReduce: Simplified Data Processing on Large Clusters</a></h3>
+<p>The MapReduce paper is an excellent example of an idea which has been so successful that it now seems self-evident. The idea of applying the concepts of functional programming at scale became a clarion call, provoking a shift from data warehousing to a new paradigm for data analysis:</p>
+<blockquote>
+<p>MapReduce is a programming model and an associated implementation for processing and generating large data sets. Users specify a map function that processes a key/value pair to generate a set of intermediate key/value pairs, and a reduce function that merges all intermediate values associated with the same intermediate key. Many real world tasks are expressible in this model, as shown in the paper.</p>
+</blockquote>
+<p>Much like <a href=https://systemsandpapers.com/papers/4a7b2df0-51d2-4cf2-9c04-12a59d8a0e0c/>Google File System</a> paper was an inspiration for the Hadoop File System, this paper was itself a major inspiration for Hadoop.</p>
+<h3 id=dapper-a-large-scale-distributed-systems-tracing-infrastructurehttpss3amazonawscomsystemsandpaperspapersdapperpdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/dapper.pdf>Dapper, a Large-Scale Distributed Systems Tracing Infrastructure</a></h3>
+<p>The Dapper paper introduces a performant approach to tracing requests across many services, which has become increasingly relevant as more companies refactor core monolithic applications into dozens or hundreds of micro-services.</p>
+<p>From the abstract:</p>
+<blockquote>
+<p>Here we introduce the design of Dapper, Google&rsquo;s production distributed systems tracing infrastructure, and describe how our design goals of low overhead, application-level transparency, and ubiquitous deployment on a very large scale system were met. Dapper shares conceptual similarities with other tracing systems, particularly Magpie and X-Trace, but certain design choices were made that have been key to its success in our environment, such as the use of sampling and restricting the instrumentation to a rather small number of common libraries.</p>
+</blockquote>
+<p>The ideas from Dapper have since made their way into open source, especially in <a href=http://zipkin.io/>Zipkin</a> and <a href=http://opentracing.io/>OpenTracing</a>.</p>
+<h3 id=kafka-a-distributed-messaging-system-for-log-processinghttpss3amazonawscomsystemsandpaperspaperskafkapdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/Kafka.pdf>Kafka: a Distributed Messaging System for Log Processing</a></h3>
+<p><a href=https://kafka.apache.org/>Apache Kafka</a> has become a core piece of infrastructure for many internet companies. It&rsquo;s versatility lends it to many roles, serving as the ingress point to &ldquo;data land&rdquo; for some, a durable queue for others, and that&rsquo;s just scratching the surface.</p>
+<p>Not only a useful addition to your toolkit, Kafka is also a beautifully designed system:</p>
+<blockquote>
+<p>Log processing has become a critical component of the data pipeline for consumer internet companies. We introduce Kafka, a distributed messaging system that we developed for collecting and delivering high volumes of log data with low latency. Our system incorporates ideas from existing log aggregators and messaging systems, and is suitable for both offline and online message consumption. We made quite a few unconventional yet practical design choices in Kafka to make our system efficient and scalable. Our experimental results show that Kafka has superior performance when compared to two popular messaging systems. We have been using Kafka in production for some time and it is processing hundreds of gigabytes of new data each day.</p>
+</blockquote>
+<p>In particular, Kafka&rsquo;s partitions do a phenomenal job of forcing application designers to make explicit tradeoffs about trading off performance for predictable message ordering.</p>
+<h3 id=wormhole-reliable-pub-sub-to-support-geo-replicated-internet-serviceshttpss3amazonawscomsystemsandpaperspaperswormholepdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/wormhole.pdf>Wormhole: Reliable Pub-Sub to Support Geo-replicated Internet Services</a></h3>
+<p>In many ways similar to <a href=/papers/910e84cb-337c-4569-805f-6df67b23c443/>Kafka</a>, Facebook&rsquo;s Wormhole is another highly scalable approach to messaging:</p>
+<blockquote>
+<p>Wormhole is a publish-subscribe (pub-sub) system developed for use within Facebook&rsquo;s geographically replicated datacenters. It is used to reliably replicate changes among several Facebook services including TAO, Graph Search and Memcache. This paper describes the design and implementation of Wormhole as well as the operational challenges of scaling the system to support the multiple data storage systems deployed at Facebook. Our production deployment of Wormhole transfers over 35 GBytes/sec in steady state (50 millions messages/sec or 5 trillion messages/day) across all deployments with bursts up to 200 GBytes/sec during failure recovery. We demonstrate that Wormhole publishes updates with low latency to subscribers that can fail or consume updates at varying rates, without compromising efficiency.</p>
+</blockquote>
+<p>In particular, note the approach to supporting lagging consumers without sacrificing overall system throughput.</p>
+<h3 id=borg-omega-and-kuberneteshttpqueueacmorgdetailcfmid2898444><a href="http://queue.acm.org/detail.cfm?id=2898444">Borg, Omega, and Kubernetes</a></h3>
+<p>While the individual papers for each of Google&rsquo;s orchestration systems (Borg, Omega and Kubernetes) are worth reading in their own right, this article is an excellent overview of the three:</p>
+<blockquote>
+<p>Though widespread interest in software containers is a relatively recent phenomenon, at Google we have been managing Linux containers at scale for more than ten years and built three different container-management systems in that time. Each system was heavily influenced by its predecessors, even though they were developed for different reasons. This article describes the lessons we&rsquo;ve learned from developing and operating them.</p>
+</blockquote>
+<p>Fortunately, not all orchestration happens under Google&rsquo;s aegis, and Mesos' alternative two-layer scheduling architecture is a fascinating read as well.</p>
+<h3 id=large-scale-cluster-management-at-google-with-borghttpss3amazonawscomsystemsandpaperspapersborgpdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/borg.pdf>Large-scale cluster management at Google with Borg</a></h3>
+<p>Borg has been orchestrating much of Google&rsquo;s infrastructure for quite some time (significantly predating Omega, although fascinatingly the Omega paper predates the Borg paper by two years):</p>
+<blockquote>
+<p>Google&rsquo;s Borg system is a cluster manager that runs hundreds of thousands of jobs, from many thousands of different applications, across a number of clusters each with up to tens of thousands of machines.</p>
+</blockquote>
+<p>This paper takes a look at Borg&rsquo;s centralized scheduling model, which was both effective and efficient, although it became increasingly challenging to modify and scale over time, inspiring both Omega and Kubernetes within Google (the former to optimistically replace it, and the later seemingly to commercialize their learnings, or at least prevent Mesos from capturing too much mindshare).</p>
+<h3 id=omega-flexible-scalable-schedulers-for-large-compute-clustershttpss3amazonawscomsystemsandpaperspapersomegapdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/omega.pdf>Omega: flexible, scalable schedulers for large compute clusters</a></h3>
+<p>Omega is, among many other things, an excellent example of the <a href=http://catb.org/jargon/html/S/second-system-effect.html>second-system effect</a>, where an attempt to replace a complex existing system with something far more elegant ends up being more challenging than anticipated.</p>
+<p>In particular, Omega is a reaction against the realities of extending the aging Borg system:</p>
+<blockquote>
+<p>Increasing scale and the need for rapid response to changing requirements are hard to meet with current monolithic cluster scheduler architectures. This restricts the rate at which new features can be deployed, decreases efficiency and utilization, and will eventually limit cluster growth. We present a novel approach to address these needs using parallelism, shared state, and lock-free optimistic concurrency control.</p>
+</blockquote>
+<p>Perhaps also an example of <a href=https://www.jwz.org/doc/worse-is-better.html>worse is better</a> once again taking the day.</p>
+<h3 id=mesos-a-platform-for-fine-grained-resource-sharing-in-the-data-centerhttpss3amazonawscomsystemsandpaperspapersmesospdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/mesos.pdf>Mesos: A Platform for Fine-Grained Resource Sharing in the Data Center</a></h3>
+<p>This paper describes the design of <a href=http://mesos.apache.org/>Apache Mesos</a>, in particular its distinctive two-level scheduler:</p>
+<blockquote>
+<p>We present Mesos, a platform for sharing commodity clusters between multiple diverse cluster computing frameworks, such as Hadoop and MPI. Sharing improves cluster utilization and avoids per-framework data replication. Mesos shares resources in a fine-grained manner, allowing frameworks to achieve data locality by taking turns reading data stored on each machine. To support the sophisticated schedulers of today&rsquo;s frameworks, Mesos introduces a distributed two-level scheduling mechanism called resource offers. Mesos decides how many resources to offer each framework, while frameworks decide which resources to accept and which computations to run on them. Our results show that Mesos can achieve near-optimal data locality when sharing the cluster among diverse frameworks, can scale to 50,000 (emulated) nodes, and is resilient to failures.</p>
+</blockquote>
+<p>Used heavily by Twitter and Apple, Mesos was for some time the only open-source general scheduler with significant adoption, and is now in a fascinating competition for mindshare with Kubernetes.</p>
+<h3 id=design-patterns-for-container-based-distributed-systemshttpss3amazonawscomsystemsandpaperspapersdesign-container-based-systemspdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/design-container-based-systems.pdf>Design patterns for container-based distributed systems</a></h3>
+<p>The move to containers-based deployment and orchestration has introduced a whole new set of vocabulary like sidecars and adapters, and this paper provides a survey of the patterns which have evolved over the past decade as microservices and containers have become increasingly prominent infrastructure components:</p>
+<blockquote>
+<p>In the late 1980s and early 1990s, object-oriented programming revolutionized software development, popularizing the approach of building of applications as collections of modular components. Today we are seeing a similar revolution in distributed system development, with the increasing popularity of microservice architectures built from containerized software components. Containers are particularly well-suited as the fundamental object in distributed systems by virtue of the walls they erect at the container boundary. As this architectural style matures, we are seeing the emergence of design patterns, much as we did for object-oriented programs, and for the same reason  thinking in terms of objects (or containers) abstracts away the low-level details of code, eventually revealing higher-level patterns that are common to a variety of applications and algorithms.</p>
+</blockquote>
+<p>The &ldquo;sidecar&rdquo; term in particular likely originated in <a href=http://techblog.netflix.com/2014/11/prana-sidecar-for-your-netflix-paas.html>this blog post from Netflix</a>, which is a worthy read in its own right.</p>
+<h3 id=raft-in-search-of-an-understandable-consensus-algorithmhttpss3amazonawscomsystemsandpaperspapersraftpdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/raft.pdf>Raft: In Search of an Understandable Consensus Algorithm</a></h3>
+<p>Where we often see the second-system effect where a second system becomes bloated and complex relative to a simple initial system, the roles are reversed in the case of Paxos and Raft. Whereas Paxos is often considered beyond human comprehension, Raft is a fairly easy read:</p>
+<blockquote>
+<p>Raft is a consensus algorithm for managing a replicated log. It produces a result equivalent to (multi-)Paxos, and it is as efficient as Paxos, but its structure is different from Paxos; this makes Raft more understandable than Paxos and also provides a better foundation for building practical systems. In order to enhance understandability, Raft separates the key elements of consensus, such as leader election, log replication, and safety, and it enforces a stronger degree of coherency to reduce the number of states that must be considered. Results from a user study demonstrate that Raft is easier for students to learn than Paxos. Raft also includes a new mechanism for changing the cluster membership, which uses overlapping majorities to guarantee safety.</p>
+</blockquote>
+<p>Raft is used by <a href=https://github.com/coreos/etcd>etcd</a> and <a href=https://www.influxdata.com/>influxdb</a> among many others.</p>
+<h3 id=paxos-made-simplehttpss3amazonawscomsystemsandpaperspaperspaxos-made-simplepdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/paxos-made-simple.pdf>Paxos Made Simple</a></h3>
+<p>One of Leslie Lamport&rsquo;s numerous influential papers, Paxos Made Simple is a gem both in explaining the notoriously complex Paxos algorithm, and because even at it&rsquo;s simplest, Paxos isn&rsquo;t really that simple:</p>
+<blockquote>
+<p>The Paxos algorithm for implementing a fault-tolerant distributed system has been regarded as difficult to understand, perhaps because the original presentation was Greek to many readers. In fact, it is among the simplest and most obvious of distributed algorithms. At its heart is a consensus algorithmthe synod algorithm. The next section shows that this consensus algorithm follows almost unavoidably from the properties we want it to satisfy. The last section explains the complete Paxos algorithm, which is obtained by the straightforward application of consensus to the state machine approach for building a distributed systeman approach that should be well-known, since it is the subject of what is probably the most often-cited article on the theory of distributed systems.</p>
+</blockquote>
+<p>Paxos itself remains a deeply innovative concept, and is the algorithm behind Google&rsquo;s Chubby and <a href=https://zookeeper.apache.org/>Apache Zookeeper</a>, among many others.</p>
+<h3 id=swim-scalable-weakly-consistent-infection-style-process-group-membership-protocolhttpss3amazonawscomsystemsandpaperspapersswimpdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/swim.pdf>SWIM: Scalable Weakly-consistent Infection-style Process Group Membership Protocol</a></h3>
+<p>The majority of consensus algorithms focus on being <a href=/papers/883d1956-bb05-464c-b02d-5a64f269c810/>consistent during partition</a>, SWIM goes the other direction and focuses on availability:</p>
+<blockquote>
+<p>Several distributed peer-to-peer applications require weakly-consistent knowledge of process group membership information at all participating processes. SWIM is a generic software module that offers this service for large scale process groups. The SWIM effort is motivated by the unscalability of traditional heart-beating protocols, which either impose network loads that grow quadratically with group size, or compromise response times or false positive frequency w.r.t. detecting process crashes. This paper reports on the design, implementation and performance of the SWIM sub-system on a large cluster of commodity PCs.</p>
+</blockquote>
+<p>SWIM is used in Hashicorp&rsquo;s software, as well as <a href=http://uber.github.io/ringpop/>Uber&rsquo;s Ringpop</a>.</p>
+<h3 id=the-byzantine-generals-problemhttpss3amazonawscomsystemsandpaperspaperslamport_82-the_byzantine_generals_problempdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/Lamport_82-The_Byzantine_Generals_Problem.pdf>The Byzantine Generals Problem</a></h3>
+<p>Another classic Leslie Lamport paper on consensus, the Byzantine Generals Problem explores how to deal with distributed actors which intentionally or accidentally submit incorrect messages:</p>
+<blockquote>
+<p>Reliable computer systems must handle malfunctioning components that give conflicting information
+to different parts of the system. This situation can be expressed abstractly in terms of a group of
+generals of the Byzantine army camped with their troops around an enemy city. Communicating only
+by messenger, the generals must agree upon a common battle plan. However, one or more of them
+may be traitors who will try to confuse the others. The problem is to find an algorithm to ensure that
+the loyal generals will reach agreement. It is shown that, using only oral messages, this problem is
+solvable if and only if more than two-thirds of the generals are loyal; so a single traitor can confound
+two loyal generals. With unforgeable written messages, the problem is solvable for any number of
+generals and possible traitors. Applications of the solutions to reliable computer systems are then
+discussed.</p>
+</blockquote>
+<p>The paper is mostly focused on the formal proof, a bit of a theme from Lamport who developed <a href=https://en.wikipedia.org/wiki/TLA%2B>TLA+</a> to make formal proving easier, but is also a useful reminder that we still tend to assume our components will behave reliably and honestly, and perhaps we shouldn&rsquo;t!</p>
+<h3 id=out-of-the-tar-pithttpss3amazonawscomsystemsandpaperspapersoutofthetarpitpdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/outofthetarpit.pdf>Out of the Tar Pit</a></h3>
+<p>Out of the Tar Pit bemoans unnecessary complexity in software, and proposes that that functional programming and better data modeling can help us reduce accidental complexity (arguing that most unnecessary complexity comes from state).</p>
+<p>From the abstract:</p>
+<blockquote>
+<p>Complexity is the single major difficulty in the successful development of large-scale software systems. Following Brooks we distinguish accidental from essential difficulty, but disagree with his premise that most complexity remaining in contemporary systems is essential. We identify common causes of complexity and discuss general approaches which can be taken to eliminate them where they are accidental in nature. To make things more concrete we then give an outline for a potential complexity-minimizing approach based on functional programming and Codd&rsquo;s relational model of data.</p>
+</blockquote>
+<p>Certainly a good read, although reading a decade later it&rsquo;s fascinating to see that neither of those approaches have particularly taken off, and instead the closest &ldquo;universal&rdquo; approach to reducing complexity seems to be the move to numerous mostly stateless services, which is perhaps more a reduction of <em>local complexity</em>, at the expense of larger systemic complexity, whose maintenance is then delegated to more specialized systems engineers.</p>
+<p>(This is yet another paper that makes me wish <a href=https://en.wikipedia.org/wiki/TLA%2B>TLA+</a> felt natural enough to be a commonly adopted tool.)</p>
+<h3 id=the-chubby-lock-service-for-loosely-coupled-distributed-systemshttpss3amazonawscomsystemsandpaperspaperschubby-osdi06pdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/chubby-osdi06.pdf>The Chubby lock service for loosely-coupled distributed systems</a></h3>
+<p>Distributed systems are hard enough without having to frequently reimplement Paxos or Raft, and the model proposed by Chubby is to implement consensus once in a shared service, which will allow systems built upon it to share in the resilience of distribution by following greatly simplified patterns.</p>
+<p>From the abstract:</p>
+<blockquote>
+<p>We describe our experiences with the Chubby lock service, which is intended to provide coarse-grained locking as well as reliable (though low-volume) storage for a loosely-coupled distributed system. Chubby provides an interface much like a distributed file system with advisory locks, but the design emphasis is on availability and reliability, as opposed to high performance. Many instances of the service have been used for over a year, with several of them each handling a few tens of thousands of clients concurrently. The paper describes the initial design and expected use, compares it with actual use, and explains how the design had to be modified to accommodate the differences.</p>
+</blockquote>
+<p>In the open source world, the way <a href=https://zookeeper.apache.org/>Zookeeper</a> is used in projects like Kafka and Mesos has the same role as Chubby.</p>
+<h3 id=bigtable-a-distributed-storage-system-for-structured-datahttpsstaticgoogleusercontentcommediaresearchgooglecomenarchivebigtable-osdi06pdf><a href=https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf>Bigtable: A Distributed Storage System for Structured Data</a></h3>
+<p>One of Google&rsquo;s preeminent papers and technologies is Bigtable, which was an early (early in the internet era, anyway) NoSQL datastore, operating at extremely high scale and built on top of Chubby.</p>
+<blockquote>
+<p>Bigtable is a distributed storage system for managing structured data that is designed to scale to a very large size: petabytes of data across thousands of commodity servers. Many projects at Google store data in Bigtable, including web indexing, Google Earth, and Google Finance. These applications place very different demands on Bigtable, both in terms of data size (from URLs to web pages to satellite imagery) and latency requirements (from backend bulk processing to real-time data serving). Despite these varied demands, Bigtable has successfully provided a flexible, high-performance solution for all of these Google products. In this paper we describe the simple data model provided by Bigtable, which gives clients dynamic control over data layout and format, and we describe the design and implementation of Bigtable.</p>
+</blockquote>
+<p>From the SSTable design to the bloom filters, Cassandra and inherits significantly from the Bigtable paper, and is probably rightfully considered a merging of the Dynamo and Bigtable papers.</p>
+<h3 id=spanner-googles-globally-distributed-databasehttpsstaticgoogleusercontentcommediaresearchgooglecomenpubsarchive44915pdf><a href=https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/44915.pdf>Spanner: Google&rsquo;s Globally-Distributed Database</a></h3>
+<p>Where many early NoSQL storage systems traded eventual consistency for increased resiliency, building on top of eventually consistent systems can be harrowing. Spanner represents an approach from Google to offering both strong consistency and distributed reliability, relying in part on a novel approach to managing time.</p>
+<blockquote>
+<p>Spanner is Google&rsquo;s scalable, multi-version, globally distributed, and synchronously-replicated database. It is the first system to distribute data at global scale and support externally-consistent distributed transactions. This paper describes how Spanner is structured, its feature set, the rationale underlying various design decisions, and a novel time API that exposes clock uncertainty. This API and its implementation are critical to supporting external consistency and a variety of powerful features: nonblocking reads in the past, lock-free read-only transactions, and atomic schema changes, across all of Spanner.</p>
+</blockquote>
+<p>We haven&rsquo;t seen any open-source Spanner equivalents yet, but I imagine we&rsquo;ll start seeing them in 2018.</p>
+<h3 id=security-keys-practical-cryptographic-second-factors-for-the-modern-webhttpsstaticgoogleusercontentcommediaresearchgooglecomenpubsarchive45409pdf><a href=https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45409.pdf>Security Keys: Practical Cryptographic Second Factors for the Modern Web</a></h3>
+<p><a href=https://en.wikipedia.org/wiki/YubiKey>Security keys like the YubiKey</a> have emerged as the most secure second authentication factor, and this paper out of Google explains the motivations that lead to their creation, and the design that makes them work.</p>
+<p>From the abstract:</p>
+<blockquote>
+<p>Security Keys are second-factor devices that protect users against phishing and man-in-the-middle attacks. Users carry a single device and can self-register it with any online service that supports the protocol. The devices are simple to implement and deploy, simple to use, privacy preserving, and secure against strong attackers. We have shipped support for Security Keys in the Chrome web browser and in Google&rsquo;s online services. We show that Security Keys lead to both an increased level of security and user satisfaction by analyzing a two year deployment which began within Google and has extended to our consumer-facing web applications. The Security Key design has been standardized by the FIDO Alliance, an organization with more than 250 member companies spanning the industry. Currently, Security Keys have been deployed by Google, Dropbox, and GitHub.</p>
+</blockquote>
+<p>They&rsquo;re also remarkably cheap! Order a few and start securing your life in a day or two.</p>
+<h3 id=beyondcorp-design-to-deployment-at-googlehttpsstaticgoogleusercontentcommediaresearchgooglecomenpubsarchive44860pdf><a href=https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/44860.pdf>BeyondCorp: Design to Deployment at Google</a></h3>
+<p>Building on the <a href=https://www.usenix.org/system/files/login/articles/login_dec14_02_ward.pdf>original BeyondCorp paper</a> in 2014, this paper is slightly more detailed and benefits from two more years of migration-fueled wisdom. That said, the big ideas have remained fairly consistent and there is not much new relative to the BeyondCorp paper itself (although that was a fantastic paper, and if you haven&rsquo;t read it, this is an equally good starting point):</p>
+<blockquote>
+<p>The goal of Google&rsquo;s BeyondCorp initiative is to improve our security with regard to how employees and devices access internal applications. Unlike the conventional perimeter security model, BeyondCorp doesn&rsquo;t gate access to services and tools based on a user&rsquo;s physical location or the originating network; instead, access policies are based on information about a device, its state, and its associated user. BeyondCorp considers both internal networks and external networks to be completely untrusted, and gates access to applications by dynamically asserting and enforcing levels, or tiers, of access.</p>
+</blockquote>
+<p>As is often the case reading Google papers, my biggest take away thought here is wondering when we&rsquo;ll start to see reusable, pluggable open source versions of the techniques described within.</p>
+<h3 id=availability-in-globally-distributed-storage-systemshttpsstaticgoogleusercontentcommediaresearchgooglecomenpubsarchive36737pdf><a href=https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36737.pdf>Availability in Globally Distributed Storage Systems</a></h3>
+<p>This paper explores how to think about availability in replicated distributed systems, and is a useful starting point for those of us who are trying to determine the correct way to measure uptime for their storage layer or any other sufficiently complex system.</p>
+<p>From the abstract:</p>
+<blockquote>
+<p>We characterize the availability properties of cloud storage systems based on an extensive one year study of Google&rsquo;s main storage infrastructure and present statistical models that enable further insight into the impact of multiple design choices, such as data placement and replication strategies. With these models we compare data availability under a variety of system parameters given the real patterns of failures observed in our fleet.</p>
+</blockquote>
+<p>Particularly interesting is the focus on correlated failures, building on the premise that users of distributed systems only experience the failure when multiple components have overlapping failures. Another expected but reassuring observation is that at Google&rsquo;s scale (and with resources distributed across racks and regions), most failure comes from tuning and system design, not from the underlying hardware.</p>
+<p>I was also surprised by how simple their definition of availability was in this case:</p>
+<blockquote>
+<p>A storage node becomes unavailable when it fails to respond positively to periodic health checking pings sent by our monitoring system. The node remains unavailable until it regains responsiveness or the storage system reconstructs the data from other surviving nodes.</p>
+</blockquote>
+<p>Often discussions of availability become arbitrarily complex (&ldquo;really it should be response rates are over X, but with correct results and within our latency SLO!"), and it&rsquo;s reassuring to see the simplest definitions are still usable.</p>
+<h3 id=still-all-on-one-server-perforce-at-scalehttpsstaticgoogleusercontentcommediaresearchgooglecomenpubsarchive39983pdf><a href=https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/39983.pdf>Still All on One Server: Perforce at Scale</a></h3>
+<p>As a company grows, code hosting performance becomes one of the critical factors in overall developer productivity (along with build and test performance), but it&rsquo;s a topic that isn&rsquo;t discussed frequently. This paper from Google discusses their experience scaling Perforce:</p>
+<blockquote>
+<p>Google runs the busiest single Perforce server on the planet, and one of the largest repositories in any source control system. From this high-water mark this paper looks at server performance and other issues of scale, with digressions into where we are, how we got here, and how we continue to stay one step ahead of our users.</p>
+</blockquote>
+<p>This paper is particularly impressive when you consider the difficulties that companies run into scaling Git monorepos (talk to a ex-Twitter employee near you for war stories).</p>
+<h3 id=large-scale-automated-refactoring-using-clangmrhttpsstaticgoogleusercontentcommediaresearchgooglecomenpubsarchive41342pdf><a href=https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41342.pdf>Large-Scale Automated Refactoring Using ClangMR</a></h3>
+<p>Large code bases tend to age poorly, especially in the case of monorepos storing hundreds or thousands of different teams collaborating on different projects. This paper covers one of Google&rsquo;s attempts to reduce the burden of maintaining their large monorepo through tooling that makes it easy to rewrite abstract syntax trees (ASTs) across the entire codebase.</p>
+<p>From the abstract:</p>
+<blockquote>
+<p>In this paper, we present a real-world implementation of a system to refactor large C++ codebases efficiently. A combination of the Clang compiler framework and the MapReduce parallel processor, ClangMR enables code maintainers to easily and correctly transform large collections of code. We describe the motivation behind such a tool, its implementation and then present our experiences using it in a recent API update with Google&rsquo;s C++ codebase.</p>
+</blockquote>
+<p>Similar work is being done with <a href=https://parasol.tamu.edu/pivot/>Pivot</a>.</p>
+<h3 id=source-code-rejuvenation-is-not-refactoringhttpss3amazonawscomsystemsandpaperspaperssofsem10pdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/sofsem10.pdf>Source Code Rejuvenation is not Refactoring</a></h3>
+<p>This paper introduces the concept of &ldquo;Code Rejuvenation&rdquo;, a unidirectional process of moving towards cleaner abstractions as new language features and libraries become available, which is particularly applicable to sprawling, older code bases.</p>
+<p>From the abstract:</p>
+<blockquote>
+<p>In this paper, we present the notion of source code rejuvenation, the automated migration of legacy code and very briefly mention the tools we use to achieve that. While refactoring improves structurally inadequate source code, source code rejuvenation leverages enhanced program language and library facilities by finding and replacing coding patterns that can be expressed through higher-level software abstractions. Raising the level of abstraction benefits software maintainability, security, and performance.</p>
+</blockquote>
+<p>There are some strong echoes of this work in <a href=/papers/large-scale-automated-refactoring-using-clangmr/>Google&rsquo;s ClangMR paper</a>.</p>
+<h3 id=searching-for-build-debt-experiences-managing-technical-debt-at-googlehttpsstaticgoogleusercontentcommediaresearchgooglecomenpubsarchive37755pdf><a href=https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/37755.pdf>Searching for Build Debt: Experiences Managing Technical Debt at Google</a></h3>
+<p>This paper is an interesting cover of how to perform large-scale migrations in living codebases. Using broken builds as the running example, they break down their strategy to three pillars: automation, make it easy to do the right thing, and make it hard to do the wrong thing.</p>
+<p>From the abstract:</p>
+<blockquote>
+<p>With a large and rapidly changing codebase, Google software engineers are constantly paying interest on various forms of technical debt. Google engineers also make efforts to pay down that debt, whether through special Fixit days, or via dedicated teams, variously known as janitors, cultivators, or demolition experts. We describe several related efforts to measure and pay down technical debt found in Google&rsquo;s BUILD files and associated dead code. We address debt found in dependency specifications, unbuildable targets, and unnecessary command line flags. These efforts often expose other forms of technical debt that must first be managed.</p>
+</blockquote>
+<h3 id=no-silver-bullet---essence-and-accident-in-software-engineeringhttpss3amazonawscomsystemsandpaperspapersfrederick_brooks_87-no_silver_bullet_essence_and_accidents_of_software_engineeringpdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/Frederick_Brooks_87-No_Silver_Bullet_Essence_and_Accidents_of_Software_Engineering.pdf>No Silver Bullet - Essence and Accident in Software Engineering</a></h3>
+<p>A seminal paper from the author of The Mythical Man Month, &ldquo;No Silver Bullet&rdquo; expands on discussion of accidental versus essential complexity, and argues that there is no longer enough accidental complexity to allow individual reductions in accidental complexity to significantly increase engineer productivity.</p>
+<p>From the abstract:</p>
+<blockquote>
+<p>Most of the big past gains in software productivity have come from removing artificial barriers that have made the accidental tasks inordinately hard, such as severe hardware cosntraints, awkward programming languages, lack of machine time. How much of what software engineers now do is still devoted to the accidental, as opposed to the essential? Unless it is more than 9/10 of all effort, shrinking all the accidental activities to zero time will not give an order of magnitude improvement.</p>
+</blockquote>
+<p>Interestingly, I think we do see accidental complexity in large codebases become large enough to make order of magnitude improvements (motivating, for example, Google&rsquo;s investments into ClangMR and such), so perhaps we&rsquo;re not quite as far ahead in the shift to essential complexity as we&rsquo;d like to believe.</p>
+<h3 id=the-unix-timesharing-systemhttpss3amazonawscomsystemsandpaperspapersunix_timesharing_systempdf><a href=https://s3.amazonaws.com/systemsandpapers/papers/unix_timesharing_system.pdf>The UNIX TimeSharing System</a></h3>
+<p>This paper describes the fundamentals of UNIX as of 1974, and what is truly remarkable is how many of the design decisions are still used today. From the permission model we&rsquo;ve all manipulated with chmod to system calls used to manipulate files, it&rsquo;s amazing how much remains intact.</p>
+<p>From the abstract:</p>
+<blockquote>
+<p>UNIX is a general-purpose, multi-user, interactive operating system for the Digital Equipment Corporation PDP-11/40 and 11/45 computers. It offers a number of features seldom found even in larger operating systems, including: (1) a hierarchical file system incorporating demountable volumes; (2) compatible file, device, and inter-process I/O; (3) the ability to initiate asynchronous processes; (4) system command language selectable on a per-user basis; and (5) over 100 subsystems including a dozen languages. This paper discusses the nature and implementation of the file system and of the user command interface.</p>
+</blockquote>
+<p>Also fascinating is their observation that UNIX has in part succeeded because it was designed to solve a general problem by its authors (working with the PDP-7 was frustrating), and not towards a more specified goal.</p>
+<hr>
+<p>After sharing this post, folks recommended a ton of additional amazing papers:</p>
+<ul>
+<li><a href=https://www.allthingsdistributed.com/files/p1041-verbitski.pdf>Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases</a></li>
+<li><a href=https://research.fb.com/wp-content/uploads/2017/10/sosp17-final14.pdf>Canopy: An End-to-End Performance Tracing And Analysis System</a></li>
+<li><a href=https://www.cs.utexas.edu/~lorenzo/corsi/cs380d/papers/p225-chandra.pdf>Unreliable Failure Detectors for Reliable Distributed Systems</a></li>
+<li><a href=https://hal.inria.fr/inria-00397981/document>CRDTs: Consistency without concurrency control</a></li>
+<li><a href=http://db.cs.berkeley.edu/papers/UCB-lattice-tr.pdf>Logic and Lattices for Distributed Programming</a></li>
+<li><a href=https://pdfs.semanticscholar.org/b02c/6b00bd5dbdbd951fddb00b906c82fa80f0b3.pdf>Zab: High-performance broadcast for primary-backup systems</a></li>
+<li><a href=https://static.googleusercontent.com/media/research.google.com/en//archive/paxos_made_live.pdf>Paxos Made Live - An Engineering Perspective</a></li>
+<li><a href=http://christophermeiklejohn.com/publications/hotedge-2018-preprint.pdf>Towards a Solution to the Red Wedding Problem</a></li>
+<li><a href=https://research.google.com/pubs/pub44271.html>Profiling a warehouse-scale computer</a></li>
+<li><a href=https://research.google.com/pubs/pub36575.html>Google-Wide Profiling: A Continuous Profiling Infrastructure for Data Centers</a></li>
+<li><a href="http://delivery.acm.org/10.1145/1650000/1646374/p66-bessey.pdf?ip=67.170.235.99&id=1646374&acc=OPEN&key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E6D218144511F3437&__acm__=1523208080_0e8b4d3f89204b7f865ffb5e4c8675df">A Few Billion Lines of Code Later: Using Static Analysis to Find Bugs in the Real World</a></li>
+<li><a href=http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf>Rules of Machine Learning: Best Practices for ML Engineering</a></li>
+<li><a href=https://hal.inria.fr/file/index/docid/555588/filename/techreport.pdf>A comprehensive study of Convergent and Commutative Replicated Data Types</a></li>
+<li><a href=https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41376.pdf>Online, Asynchronous Schema Change in F1</a></li>
+<li><a href=https://amturing.acm.org/p558-lamport.pdf>Time, Clocks and the Ordering of Events in a Distributed System</a></li>
+<li><a href=http://www.cs.yale.edu/homes/dna/vldb.pdf>C-Store: A Column-oriented DBMS</a></li>
+<li><a href=http://adrianmarriott.net/logosroot/papers/LifeBeyondTxns.pdf>Life beyond Distributed Transactions: an Apostate&rsquo;s Opinion</a></li>
+<li><a href=http://cidrdb.org/cidr2015/Papers/CIDR15_Paper16.pdf>Immutability Changes Everything</a></li>
+<li><a href=https://www.cse.buffalo.edu/~stevko/courses/cse704/fall10/papers/eurosys07.pdf>Dryad: Distributed Data-Parallel Programs from Sequential Building Blocks</a></li>
+<li><a href=http://bio.cs.washington.edu/blast.pdf>Basic Local Alignment Search Tool</a></li>
+</ul>
+<p>Send me yours! If you&rsquo;re looking for more reading materials, consider <a href=/best-books/>taking a look at my favorite books as well</a>!</p>
+<div class="mt4 w-100">
+<time class="f6 mv4 dib tracked" datetime=2018-04-07T06:00:00-07:00>
+Published on April 7, 2018.
+</time>
+</div>
+<div class="mt6 instapaper_ignoref">
+</div>
+</div>
+<aside class="w-30-l mt1-l"><div class="bg-light-gray pa3">
+<p class="f5 mb3">
+Hi folks. I'm <a href=/about>Will</a> aka <a href=https://twitter.com/lethain>@lethain</a>.
+<br>
+If you're looking to reach out to me, here are <a href=/ways-i-help/>ways I help</a>.
+If you'd like to get a email from me, subscribe to <a href=/newsletter/>my weekly newsletter</a>.
+</p>
+<p>
+I wrote
+<a href=https://www.amazon.com/Elegant-Puzzle-Systems-Engineering-Management/dp/1732265186>An Elegant Puzzle</a>.
+</p>
+<p>
+<a href=https://www.amazon.com/Elegant-Puzzle-Systems-Engineering-Management/dp/1732265186>
+<img class=w-100 src=/static/blog/2019/aep-small-lq.jpg>
+</a>
+</p>
+<p>
+As well as,
+<a href=https://staffeng.com/book>Staff Engineer</a>.
+</p>
+<p>
+<a href=https://staffeng.com/book>
+<img class=w-100 src=/static/blog/staffeng/StaffEngBookMed.jpg>
+</a>
+</p>
+</div>
+<div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+<p class="f5 b mb3">Popular</p>
+<ul class="pa0 list">
+<li class=mb2>
+<a href=/good-engineering-strategy-is-boring/>Write five, then synthesize: good engineering strategy is boring.</a>
+</li>
+<li class=mb2>
+<a href=/managing-technical-quality/>Managing technical quality in a codebase.</a>
+</li>
+<li class=mb2>
+<a href=/work-on-what-matters/>Work on what matters.</a>
+</li>
+<li class=mb2>
+<a href=/first-ninety-days-cto-vpe/>Your first 90 days as CTO or VP Engineering.</a>
+</li>
+<li class=mb2>
+<a href=/digg-acquihire/>How the Digg team was acquihired.</a>
+</li>
+</ul>
+</div>
+<div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+<p class="f5 b mb3">Recent</p>
+<ul class="pa0 list">
+<li class=mb2>
+<a href=/2021-in-review/>2021 in review.</a>
+</li>
+<li class=mb2>
+<a href=/terminal-level-rulebook/>The terminal level rulebook.</a>
+</li>
+<li class=mb2>
+<a href=/should-you-write-a-book/>Should you write a technical or management book?</a>
+</li>
+<li class=mb2>
+<a href=/notes-on-the-kool-aid-factory-planning-issue/>Notes on The Kool-Aid Factory's Planning Issue.</a>
+</li>
+<li class=mb2>
+<a href=/how-to-find-engineering-leadership-roles/>How to find engineering leadership roles.</a>
+</li>
+</ul>
+</div>
+<div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+<p class="f5 b mb3">Related</p>
+<ul class="pa0 list">
+<li class=mb2>
+<a href=/speaking-on-inside-intercom-podcast/>Infrastructure engineering @ Inside Intercom</a>
+</li>
+<li class=mb2>
+<a href=/product-management-infra-engineering/>Product management in infrastructure eng.</a>
+</li>
+<li class=mb2>
+<a href=/global-secondary-indexes/>Global secondary indexes.</a>
+</li>
+<li class=mb2>
+<a href=/physics-of-cloud-expansion/>The physics of Cloud expansion.</a>
+</li>
+<li class=mb2>
+<a href=/async-processing-with-sync-semantics/>Async processing with sync semantics?</a>
+</li>
+</ul>
+</div>
+</aside>
+</article>
+</main>
+<footer class="bg-grey bottom-0 pa3 tc" role=contentinfo>
+<div class="flex justify-between">
+<a class="f6 fw4 no-underline black-50 dn dib-ns pv2 ph3" href=https://lethain.com>
+&copy; Will Larson 2021
+</a>
+<a class="f5 fw4 no-underline black-50 dn dib-ns pv2 ph4" href=/tags/>
+Tags
+</a>
+<a class="f5 fw4 no-underline black-50 dn dib-ns pv2 ph4" href=/newsletter/>
+Newsletter
+</a>
+<a class="f5 fw4 no-underline black-50 dn dib-ns pv2 ph4" href=/feeds.xml>
+RSS
+</a>
+<a class="f5 fw4 no-underline black-50 dn dib-ns pv2 ph4" href=/about/>
+About
+</a>
+</div>
+</footer>
+</body>
+</html>
